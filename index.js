@@ -31,7 +31,7 @@ function validateForm() {
     }
   } else {
     emailList.push({name: nameInput.value, email: emailInput.value})
-    displayThankYou(removeMessage())
+    displayThankYou()
   }
 }
 
@@ -45,6 +45,7 @@ form.addEventListener('submit', function(event){
 
 const displayThankYou = () => {
   formContainer.innerText = 'Thank you for subscribing!'
+  removeMessage()
 }
 
 const removeMessage = () => {
